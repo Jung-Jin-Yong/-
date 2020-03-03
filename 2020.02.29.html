@@ -6,6 +6,18 @@
   </head>
   <body>
     <h1>민정이네 감쟈의 우주비행선</h1>
+    <input id="night_day" type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night') {
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value='day';
+    } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value='night';
+  }
+  ">
     <h2>목록</h2>
      <ol>
        <li><a href="index.html" title="홈화면으로 돌아갑니다.">Home</a></li>
