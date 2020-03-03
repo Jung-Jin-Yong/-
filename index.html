@@ -6,12 +6,26 @@
   </head>
   <body>
     <h1>민정이네 감쟈의 우주비행선</h1>
+    <input id="night_day" type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night') {
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value='day';
+    } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value='night';
+  }
+  ">
     <h2>목록</h2>
      <ol>
        <li><a href="2020.02.28.html" title="2020년 2월 28일 일정 및 결과 내용입니다.">
          2020.02.28.금요일</a></li>
       <li><a href="2020.02.29.html" title="2020년 2월 29일 일정 및 결과 내용입니다.">
            2020.02.29.토요일</a></li>
+      <li><a href="2020.03.03.html" title="2020년 3월 3일 일정 및 결과 내용입니다.">
+          2020.03.03.화요일</a></li>
      </ol>
      <h2>설명</h2>
      <p>이 페이지는 매일매일 공부하는것을
@@ -21,7 +35,7 @@
       <h3>업데이트 내용(날짜 앞 번호가 버전 정보입니다.)</h3>
       <ol>
         <li>(2020.02.28) ★★★★★사이트 개설★★★★★</li>
-        <li>(2020.03.01)업데이트 예정</li>
+        <li>(2020.03.03)주야간 모드가 추가되었습니다.</li>
       </ol>
   </body>
 </html>
