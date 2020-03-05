@@ -12,10 +12,24 @@
     target.style.backgroundColor = 'black';
     target.style.color = 'white';
     this.value='day';
+
+    var alist = document.querySelectorAll('a');
+    var i=0;
+    while(i<alist.length){
+      alist[i].style.color='powderblue';
+      i=i+1;
+    }
     } else {
     target.style.backgroundColor = 'white';
     target.style.color = 'black';
     this.value='night';
+
+    var alist = document.querySelectorAll('a');
+    var i=0;
+    while(i<alist.length){
+      alist[i].style.color='blue';
+      i=i+1;
+    }
   }
   ">
     <h2>목록</h2>
@@ -28,6 +42,8 @@
           2020.03.03.화요일</a></li>
       <li><a href="2020.03.04.html" title="2020년 3월 4일 일정 및 결과 내용입니다.">
           2020.03.04.수요일</a></li>
+      <li><a href="2020.03.05.html" title="2020년 3월 5일 일정 및 결과 내용입니다.">
+            2020.03.05.목요일</a></li>
      </ol>
      <h2>설명</h2>
      <p>이 페이지는 매일매일 공부하는것을
@@ -38,6 +54,7 @@
       <ol>
         <li>(2020.02.28) ★★★★★사이트 개설★★★★★</li>
         <li>(2020.03.03)주야간 모드가 추가되었습니다.</li>
+        <li>(2020.03.04)주야간 모드에 따른 링크 색깔이 수정되었습니다.</li>
       </ol>
   </body>
 </html>
