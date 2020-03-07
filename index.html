@@ -3,35 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>민정이네 감쟈의 우주비행선</title>
+    <script>
+      function nightdayhandler(self){
+        var target = document.querySelector('body');
+        if(self.value === 'night') {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        self.value='day';
+
+        var alist = document.querySelectorAll('a');
+        var i=0;
+        while(i<alist.length){
+          alist[i].style.color='powderblue';
+          i=i+1;
+        }
+        } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        self.value='night';
+
+        var alist = document.querySelectorAll('a');
+        var i=0;
+        while(i<alist.length){
+          alist[i].style.color='blue';
+          i=i+1;
+        }
+      }
+    }
+    </script>
   </head>
   <body>
     <h1>민정이네 감쟈의 우주비행선</h1>
-    <input id="night_day" type="button" value="night" onclick="
-    var target = document.querySelector('body');
-    if(this.value === 'night') {
-    target.style.backgroundColor = 'black';
-    target.style.color = 'white';
-    this.value='day';
-
-    var alist = document.querySelectorAll('a');
-    var i=0;
-    while(i<alist.length){
-      alist[i].style.color='powderblue';
-      i=i+1;
-    }
-    } else {
-    target.style.backgroundColor = 'white';
-    target.style.color = 'black';
-    this.value='night';
-
-    var alist = document.querySelectorAll('a');
-    var i=0;
-    while(i<alist.length){
-      alist[i].style.color='blue';
-      i=i+1;
-    }
-  }
-  ">
+    <input id="night_day" type="button" value="night" onclick="nightdayhandler(this)">
     <h2>목록</h2>
      <ol>
        <li><a href="2020.02.28.html" title="2020년 2월 28일 일정 및 결과 내용입니다.">
@@ -44,7 +47,11 @@
           2020.03.04.수요일</a></li>
       <li><a href="2020.03.05.html" title="2020년 3월 5일 일정 및 결과 내용입니다.">
             2020.03.05.목요일</a></li>
+      <li><a href="2020.03.07.html" title="2020년 3월 7일 일정 및 결과 내용입니다.">
+            2020.03.07.토요일</a></li>
      </ol>
+     <br><br>
+     <p><img src="homepage.jpg" width="400" style="transform:rotate(90deg);"></p><br><br>
      <h2>설명</h2>
      <p>이 페이지는 매일매일 공부하는것을
      기록하는 페이지입니다. 목록을 눌러 당일의 일정을 확인하실 수 있습니다.
@@ -55,6 +62,7 @@
         <li>(2020.02.28) ★★★★★사이트 개설★★★★★</li>
         <li>(2020.03.03)주야간 모드가 추가되었습니다.</li>
         <li>(2020.03.04)주야간 모드에 따른 링크 색깔이 수정되었습니다.</li>
+        <li>(2020.03.07)리팩터링 작업을 하였습니다.</li>
       </ol>
   </body>
 </html>
