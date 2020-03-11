@@ -4,32 +4,40 @@
     <meta charset="utf-8">
     <title>민정이네 감쟈의 우주비행선</title>
     <script>
+      var Body = {
+        SetColor : function(color){
+          document.querySelector("body").style.color=color;
+        },
+        SetBackgroundColor : function(color){
+          document.querySelector("body").style.backgroundColor=color;
+        }
+      }
+      var Links = {
+        SetColor : function(color){
+          var alist = document.querySelectorAll('a');
+          var i=0;
+          while(i<alist.length){
+            alist[i].style.color=color;
+            i=i+1;
+          }
+        }
+      }
       function nightdayhandler(self){
         var target = document.querySelector('body');
         if(self.value === 'night') {
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
+        Body.SetBackgroundColor('black');
+        Body.SetColor('white');
         self.value='day';
 
-        var alist = document.querySelectorAll('a');
-        var i=0;
-        while(i<alist.length){
-          alist[i].style.color='powderblue';
-          i=i+1;
-        }
+        Links.SetColor('powderblue');
         } else {
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
+        Body.SetBackgroundColor('white');
+        Body.SetColor('black');
         self.value='night';
 
-        var alist = document.querySelectorAll('a');
-        var i=0;
-        while(i<alist.length){
-          alist[i].style.color='blue';
-          i=i+1;
+        Links.SetColor('blue');
         }
       }
-    }
     </script>
   </head>
   <body>
@@ -49,6 +57,9 @@
             2020.03.05.목요일</a></li>
       <li><a href="2020.03.07.html" title="2020년 3월 7일 일정 및 결과 내용입니다.">
             2020.03.07.토요일</a></li>
+      <li><a href="2020.03.11.html" title="2020년 3월 11일 일정 및 결과 내용입니다.">
+            2020.03.11.수요일</a></li>
+
      </ol>
      <br><br>
      <p><img src="homepage.jpg" width="400" style="transform:rotate(90deg);"></p><br><br>
@@ -63,6 +74,7 @@
         <li>(2020.03.03)주야간 모드가 추가되었습니다.</li>
         <li>(2020.03.04)주야간 모드에 따른 링크 색깔이 수정되었습니다.</li>
         <li>(2020.03.07)리팩터링 작업을 하였습니다.</li>
+        <li>(2020.03.11)객체지향 리팩터링 작업을 하였습니다.</li>
       </ol>
   </body>
 </html>
