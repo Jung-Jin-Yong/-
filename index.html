@@ -3,42 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>민정이네 감쟈의 우주비행선</title>
-    <script>
-      var Body = {
-        SetColor : function(color){
-          document.querySelector("body").style.color=color;
-        },
-        SetBackgroundColor : function(color){
-          document.querySelector("body").style.backgroundColor=color;
-        }
-      }
-      var Links = {
-        SetColor : function(color){
-          var alist = document.querySelectorAll('a');
-          var i=0;
-          while(i<alist.length){
-            alist[i].style.color=color;
-            i=i+1;
-          }
-        }
-      }
-      function nightdayhandler(self){
-        var target = document.querySelector('body');
-        if(self.value === 'night') {
-        Body.SetBackgroundColor('black');
-        Body.SetColor('white');
-        self.value='day';
-
-        Links.SetColor('powderblue');
-        } else {
-        Body.SetBackgroundColor('white');
-        Body.SetColor('black');
-        self.value='night';
-
-        Links.SetColor('blue');
-        }
-      }
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="colors.js"></script>
   </head>
   <body>
     <h1>민정이네 감쟈의 우주비행선</h1>
@@ -59,7 +25,8 @@
             2020.03.07.토요일</a></li>
       <li><a href="2020.03.11.html" title="2020년 3월 11일 일정 및 결과 내용입니다.">
             2020.03.11.수요일</a></li>
-
+      <li><a href="2020.03.12.html" title="2020년 3월 12일 일정 및 결과 내용입니다.">
+            2020.03.12.목요일</a></li>
      </ol>
      <br><br>
      <p><img src="homepage.jpg" width="400" style="transform:rotate(90deg);"></p><br><br>
@@ -75,6 +42,7 @@
         <li>(2020.03.04)주야간 모드에 따른 링크 색깔이 수정되었습니다.</li>
         <li>(2020.03.07)리팩터링 작업을 하였습니다.</li>
         <li>(2020.03.11)객체지향 리팩터링 작업을 하였습니다.</li>
+        <li>(2020.03.12)리팩터링 작업 완료</li>
       </ol>
   </body>
 </html>
