@@ -15,12 +15,33 @@
       body{
         margin-top:0;
       }
+      #middle{
+        border-right: 1px solid gray;
+        display:block;
+        width:200px;
+      }
+      #middle h2{
+        margin-top: 0;
+      }
+      #grid1{
+        display:grid;
+        grid-template-columns: 200px 1fr;
+      }
+      #grid1 #bottom{
+        padding-left: 30px;
+        padding-top:30px;
+      }
+      #img1{
+        text-align: center;
+      }
     </style>
   </head>
   <body>
     <h1>민정이네 감쟈의 우주비행선</h1>
+    <div id="grid1">
+    <div id="middle">
     <input id="night_day" type="button" value="night" onclick="nightdayhandler(this)">
-    <h2>목록</h2>
+    <h2 style="text-align:center;">목록</h2>
      <ol>
        <li><a href="2020.02.28.html" title="2020년 2월 28일 일정 및 결과 내용입니다.">
          2020.02.28.금요일</a></li>
@@ -44,9 +65,16 @@
             2020.03.16.월요일</a></li>
       <li><a href="2020.03.17.html" title="2020년 3월 17일 일정 및 결과 내용입니다.">
             2020.03.17.화요일</a></li>
+      <li><a href="2020.03.18.html" title="2020년 3월 18일 일정 및 결과 내용입니다.">
+            2020.03.18.수요일</a></li>
      </ol>
+   </div>
+   <div id="bottom">
      <br><br>
-     <p><img src="homepage.jpg" width="400" style="transform:rotate(90deg);"></p><br><br>
+     <span id="img1">
+     <p><img src="homepage.jpg" width="400" style="transform:rotate(90deg);"></p>
+      </span>
+      <br><br><br>
      <h2>설명</h2>
      <p>이 페이지는 매일매일 공부하는것을
      기록하는 페이지입니다. 목록을 눌러 당일의 일정을 확인하실 수 있습니다.
@@ -62,6 +90,9 @@
         <li>(2020.03.12)리팩터링 작업 완료</li>
         <li>(2020.03.16)16일자 이후로 Home 링크버튼 색상 변경을 하였습니다.</li>
         <li>(2020.03.17)제목 가운데 정렬 및 하단선 추가</li>
+        <li>(2020.03.18)홈페이지 및 3월 18일자 페이지 전체 그리드 추가</li>
       </ol>
+    </div>
+  </div>
   </body>
 </html>
