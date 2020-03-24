@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>민정이네 감쟈의 우주비행선</title>
+    <style>
+      h1{
+        text-align: center;
+        border-bottom: 1px solid gray;
+        margin:0;
+        padding:20px;
+      }
+      body{
+        margin-top:0;
+      }
+      #grid1 #middle{
+        border-right: 1px solid gray;
+        display:block;
+        width: 200px;
+      }
+      #grid1{
+        display:grid;
+        grid-template-columns: 200px 1fr;
+      }
+      #grid1 #bottom{
+        padding-left: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="colors.js"></script>
+  </head>
+  <body>
+    <h1>2020년 3월 24일 화요일 일지</h1>
+    <div id="grid1">
+    <div id="middle">
+      <div class="js-clock">
+        <h2>00:00</h2>
+      </div>
+      <script src="clock.js"></script>
+    <input id="night_day" type="button" value="night" onclick="nightdayhandler(this)">
+    <h2>목록</h2>
+     <ol>
+       <li><a href="index.html" title="홈화면으로 돌아갑니다." style="color:green">Home</a></li>
+     </ol>
+   </div>
+   <div id="bottom">
+     <h2>1.오늘의 성과</h2>
+     <p>
+         1)일단어 <br>
+         2)노마드코더 바닐라자바스크립트 3-5강~3-7강 학습완료<br>
+         일정 추가기능에 대하여 공부하였습니다.
+    </p>
+    <p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/YD1yDErhMa4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+    <p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/dbPOjiG5WJ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+      <h2>댓글은 여기에</h2>
+        <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://jjinnyongs-spaceship.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </body>
+</div>
+</div>
+</html>
