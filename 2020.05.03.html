@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>민정이네 감쟈의 우주비행선</title>
+    <style>
+      h1{
+        text-align: center;
+        border-bottom: 1px solid gray;
+        margin:0;
+        padding:20px;
+      }
+      body{
+        margin-top:0;
+      }
+      #grid1 #middle{
+        border-right: 1px solid gray;
+        display:block;
+        width: 200px;
+      }
+      #grid1{
+        display:grid;
+        grid-template-columns: 200px 1fr;
+      }
+      #grid1 #bottom{
+        padding-left: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="colors.js"></script>
+  </head>
+  <body>
+    <h1>2020년 5월 3일 일요일 일지</h1>
+    <div id="grid1">
+    <div id="middle">
+      <h3>현재 시각</h3>
+      <div class="js-clock">
+        <h2>00:00</h2>
+      </div>
+      <h3>현재 날씨(온도, 지역)</h3>
+      <span class="js-weather"></span>
+      <script src="ujuweather.js"></script> <br><br>
+      <script src="clock.js"></script>
+    <input id="night_day" type="button" value="night" onclick="nightdayhandler(this)">
+    <h2>목록</h2>
+     <ol>
+       <li><a href="index.html" title="홈화면으로 돌아갑니다." style="color:green">Home</a></li>
+     </ol>
+   </div>
+   <div id="bottom">
+     <h2>1.오늘의 성과</h2>
+     <p>
+         1)일단어 <br>
+         2)우쥬비행선 본체 사이드 바 등 본체 80% 제작을 완료하였습니다. <br>
+         계속해서 우주비행선 본체를 제작중입니다.<br><br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/6FnkGKYK6iQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+
+      <h2>댓글은 여기에</h2>
+        <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://jjinnyongs-spaceship.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </body>
+</div>
+</div>
+</html>
